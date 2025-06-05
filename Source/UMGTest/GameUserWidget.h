@@ -17,8 +17,13 @@ class UMGTEST_API UGameUserWidget : public UUserWidget
 protected:
 	virtual void NativeConstruct() override;
 
+	virtual void NativeDestruct() override;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidgetAnim), Transient)
 	UWidgetAnimation* FadeInAnim;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidgetAnim), Transient)
+	UWidgetAnimation* FadeOutAnim;
 
 public:
 	UFUNCTION(BlueprintCallable)
